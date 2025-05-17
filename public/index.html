@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discord Bot 操作GUI</title>
+  <script defer src="main.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-900 text-white p-4 space-y-4">
+  <div class="max-w-md mx-auto space-y-3">
+    <h1 class="text-2xl font-bold text-center">Discord Bot 操作ツール</h1>
+
+    <input id="token" type="password" placeholder="ボットトークン" class="w-full p-2 bg-gray-800 border border-gray-600 rounded" />
+    <input id="channelId" type="text" placeholder="チャンネルID" class="w-full p-2 bg-gray-800 border border-gray-600 rounded" />
+    <textarea id="message" rows="4" placeholder="送信メッセージ（複数行OK）" class="w-full p-2 bg-gray-800 border border-gray-600 rounded"></textarea>
+    <input id="count" type="number" min="1" placeholder="送信回数" class="w-full p-2 bg-gray-800 border border-gray-600 rounded" />
+    <input id="speed" type="number" min="100" placeholder="送信速度(ms)" class="w-full p-2 bg-gray-800 border border-gray-600 rounded" />
+
+    <div class="flex space-x-2">
+      <button id="sendBtn" class="flex-1 py-2 bg-purple-600 hover:bg-purple-700 rounded">送信開始</button>
+      <button id="stopBtn" class="flex-1 py-2 bg-red-600 hover:bg-red-700 rounded">停止</button>
+    </div>
+
+    <div id="log" class="bg-gray-800 text-sm p-2 rounded h-40 overflow-y-auto"></div>
+
+    <footer class="text-center text-sm text-gray-400 pt-4">
+      開発者：みぞがみ<br />
+      <a href="https://discord.gg/7TYQdRfXHV" target="_blank" class="text-blue-400 underline">サポートDiscordサーバー</a>
+    </footer>
+  </div>
+</body>
+</html>
